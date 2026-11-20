@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payroll</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Payroll</h1>
+  <form id="addForm">
+    <label for="name">Employee Name</label>
+    <input type="text" id="name" required>
+    <label for="days">Days Worked</label>
+    <input type="number" id="days" min="0" step="any" required>
+    <label for="rate">Daily Rate</label>
+    <input type="number" id="rate" min="0" step="any" required>
+    <label for="ded">Deduction Amount</label>
+    <input type="number" id="ded" min="0" step="any" value="0" required>
+    <button type="submit">Add Employee</button>
+  </form>
+
+  <div class="tbl">
+    <table>
+      <thead>
+        <tr>
+          <th class="n">No.</th><th>Employee Name</th><th class="n">Days Worked</th>
+          <th class="n">Daily Rate</th><th class="n">Gross Pay</th>
+          <th class="n">Deduction Amount</th><th class="n">Net Pay</th>
+        </tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+  </div>
+
+  <form id="delForm">
+    <label for="delNo">Line Number to Delete</label>
+    <input type="number" id="delNo" min="1" step="1" required>
+    <button type="submit">Delete Employee</button>
+  </form>
+  <p id="message"></p>
+  <a href="index.html">Back to Home Page</a>
+
+  <script src="payroll.js"></script>
+</body>
+</html>
